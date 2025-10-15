@@ -280,7 +280,7 @@ Fire PROC
     ret
 Fire ENDP
 
-; --- bullets update and collision with ship ---
+; --- bullets update and collision using x/y range comparisons ---
 UpdateBullets PROC USES eax ebx ecx edx esi edi
     mov  ecx, MAX_BUL
     mov  esi, 0
@@ -319,7 +319,6 @@ UpdateBullets PROC USES eax ebx ecx edx esi edi
     mov  edx, 6
     mov  ebx, 3
 @sz_ok:
-    ; bbox test
     mov  eax, bulX[esi*4]
     mov  edi, shipX
     cmp  eax, edi   jl  @nextB
@@ -648,7 +647,7 @@ main PROC
     call Clrscr
     call Randomize
 
-    ; schedule first difficulty bump 10 s from now
+    ; schedule first difficulty bump 10s from now
     call GetTickCount@0
     add  eax, 10000
     mov  lastBumpMs, eax
