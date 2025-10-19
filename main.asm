@@ -1,11 +1,5 @@
-; Demonstrate the AddTwo Procedure     (AddTwo.asm)
 ; Demonstrates different procedure call protocols.
 INCLUDE rocketGame.inc
-
-.data
-word1 WORD 1234h
-word2 WORD 4111h
-sum DWORD ?
 
 .code
 main PROC PUBLIC
