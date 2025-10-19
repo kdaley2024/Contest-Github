@@ -39,3 +39,6 @@ cmp eax, 5
     je  DrawAim_L11
     mov esi, -1
     mov edi, 0
+    jmp DrawAim_Lset
+
+
