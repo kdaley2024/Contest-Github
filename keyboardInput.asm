@@ -90,3 +90,5 @@ CheckKeys PROC USES eax ebx
 @noSp:
     ret
 CheckKeys ENDP
+
+END
