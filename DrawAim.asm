@@ -23,3 +23,19 @@ mov esi, 1   ; dx default
     je  DrawAim_L3
     cmp eax, 4
     je  DrawAim_L4
+cmp eax, 5
+    je  DrawAim_L5
+    cmp eax, 6
+    je  DrawAim_L6
+    cmp eax, 7
+    je  DrawAim_L7
+    cmp eax, 8
+    je  DrawAim_L8
+    cmp eax, 9
+    je  DrawAim_L9
+    cmp eax, 10
+    je  DrawAim_L10
+    cmp eax, 11
+    je  DrawAim_L11
+    mov esi, -1
+    mov edi, 0
