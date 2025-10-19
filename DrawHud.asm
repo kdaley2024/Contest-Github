@@ -1,12 +1,4 @@
 INCLUDE rocketGame.inc
-.data
-titleMsg    BYTE    "Rocket Stickman (MASM/Irvine32)",0
-scoreLbl    BYTE    "Score: ",0
-hpLbl       BYTE    " Ship HP: ",0
-diffLbl     BYTE    "  Speed: ",0
-score       DWORD   0
-shipHP      DWORD   1
-bgSpeed     DWORD   1   
 
 .code
 DrawHUD PROC USES eax edx
