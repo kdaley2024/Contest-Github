@@ -3,54 +3,46 @@ INCLUDE rocketGame.inc
 .data
 
 titleMsg    BYTE    "Trip in our Fav Rocketship",0
-scoreLbl    BYTE    "Score: ",0
-hpLbl       BYTE    " Ship HP: ",0
-diffLbl     BYTE    "  Speed: ",0
+lvlLbl      BYTE    " Level: ",0
 
-; ---------- player / aim ----------
+; ---------- player ----------
 stickX      DWORD   6
 stickY      DWORD   18           
-jumpStep    DWORD   2
-jumpTimerMs DWORD   0            ; for double-jump detection
-jumpWindow  DWORD   180          ; ms to allow a second UP for double jump
-isDucking   DWORD   0
-aimDeg      SDWORD  90           ; 0 to 180 degrees
 
-; ---------- bullets ----------
-bulX        DWORD   MAX_BUL DUP(0)
-bulY        DWORD   MAX_BUL DUP(0)
-bulVX       SDWORD  MAX_BUL DUP(0)
-bulVY       SDWORD  MAX_BUL DUP(0)
-bulLive     DWORD   MAX_BUL DUP(0)
 
 ; ---------- spaceship ----------
 shipX       SDWORD  70
 shipY       SDWORD  6
 shipType    DWORD   0            ; 0 small(1HP), 1 med(2HP), 2 big(3HP)
-shipHP      DWORD   1
-hitFlash    DWORD   0            ; frames of flash after hit
 
 ; ---------- obstacles / background ----------
-bgSpeed     DWORD   1            ; increases every 10s
+bgSpeed2x     DWORD   2           
 lastBumpMs  DWORD   0            ; next difficulty bump time (ms)
-obsX        SDWORD  30, 45, 60   ; three moving pillars
-obsGapY     DWORD   15, 10, 12   ; gap center rows
-obsGapH     DWORD   5,  4,  6     ; half-gap heights
+shipAcc DWORD   0
+shipStep    DWORD   1
 
 ; ---------- timing ----------
-score       DWORD   0
-frameDelay  DWORD   30           
+frameDelay  DWORD   30        
+limbMask        DWORD   0Fh
+nextDamageIdx   DWORD   0
+playerIFrames   DWORD   0
+playerFlash     DWORD   0
+damageOrder     DWORD   4, 8, 2, 1
+gravAcc         DWORD   0
+vInput          DWORD   0
+level           DWORD   1
 
 ; strings
-spcStr      BYTE    " ",0
 stickHead   BYTE    "O",0
 stickBody   BYTE    "|",0
 stickArms   BYTE    "/-",0
 stickLegs   BYTE    "/ \",0
-gunChar     BYTE    "*",0       
-shipChar    BYTE    "^",0
-hitChar     BYTE    "#",0
-pillarChar  BYTE    "|",0
-bulletChar  BYTE    ".",0
+
+;colors
+BLACK       EQU 0
+WHITE       EQU 15
+LIGHTRED    EQU 12
+LIGHTCYAN   EQU 11
+H_STEP      EQU 2
 
 END
