@@ -6,13 +6,14 @@ SpawnShip PROC
     call RandomRange
     mov  shipType, eax
 
-    mov  eax, shipType
-    cmp  eax, 0
-    je   @small
-    cmp  eax, 1
-    je   @med
-    mov  eax, 3
-    jmp  @sizeDone
-@med:
-    mov  eax, 2
-    jmp  @sizeDone
+    mov  eax, scrW
+    sub  eax, 12
+    call RandomRange
+    add  eax, 3
+    mov  shipX, eax
+
+    mov  shipY, 1
+    ret
+SpawnShip ENDP
+
+END
