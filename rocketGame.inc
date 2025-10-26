@@ -25,10 +25,7 @@ VK_ESCAPE EQU 1Bh
  GetTickCount    PROTO
  Sleep           PROTO :DWORD
 PutChAt PROTO :BYTE, :DWORD, :DWORD
-UpdateBullets PROTO
 DrawShip  PROTO
-DrawObstacles   PROTO
-DrawAim PROTO :DWORD, :DWORD, :SDWORD
 SpawnShip PROTO
 Fire  PROTO
 DrawHud PROTO
