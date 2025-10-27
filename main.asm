@@ -26,10 +26,16 @@ main PROC PUBLIC
     call MoveShipDown
     call CheckPlayerShipCollision
 
-    ;call DrawObstacles
-    ;call DrawShip
-    ;call UpdateBullets
-    ;call DrawHUD
+    cmp  playerFlash, 0
+    jle  @noflash
+    dec  playerFlash
+@noflash:
+    cmp  playerIFrames, 0
+    jle  @noifr
+    dec  playerIFrames
+@noifr:
+    call DrawShip
+    call DrawHUD
     call DrawPlayer
     ;call UpdateDifficulty
     ;push frameDelay
