@@ -21,18 +21,37 @@ CheckPlayerShipCollision PROC USES eax ebx ecx edx esi edi ebp
 
 @sz_ok:
 
-    mov  eax, shipX                   ; sx0
-    mov  ecx, eax                     ; temp = sx0
-    add  ecx, edx                     ; temp = sx0 + W
-    dec  ecx                          ; sx1
+    mov  eax, shipX                 
+    mov  ecx, eax                    
+    add  ecx, edx                     
+    dec  ecx                          
 
-    mov  esi, shipY                   ; sy0
-    mov  edx, esi                     ; temp = sy0
-    add  edx, ebx                     ; temp = sy0 + H
-    dec  edx                          ; sy1   (EDX holds sy1)
+    mov  esi, shipY                  
+    mov  edx, esi                     
+    add  edx, ebx                   
+    dec  edx                          
 
-    mov  ebx, stickX                  ; px center
-    mov  edi, ebx                     ; px1 base
-    sub  ebx, 1                       ; px0 = x-1
-    add  edi, 1                       ; px1 = x+1
+    mov  ebx, stickX                 
+    mov  edi, ebx                    
+    sub  ebx, 1                    
+    add  edi, 1                    
 
+    cmp  eax, edi                    
+    jg   @skip
+    cmp  ecx, ebx                     
+    jl   @skip
+
+    mov  ebp, stickY                
+    mov  eax, ebp                     
+    add  eax, 3                       
+
+    cmp  esi, eax                     
+    jg   @skip
+    cmp  edx, ebp                    
+    jl   @skip
+
+    call DamagePlayer
+
+@skip:
+    ret
+CheckPlayerShipCollision ENDP
