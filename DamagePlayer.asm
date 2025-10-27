@@ -1,5 +1,7 @@
 INCLUDE rocketGame.inc
 
+.code
+
 DamagePlayer PROC USES eax ebx ecx edx
 
     mov  eax, nextDamageIdx
