@@ -28,8 +28,6 @@ nextDamageIdx   DWORD   0
 playerIFrames   DWORD   0
 playerFlash     DWORD   0
 damageOrder     DWORD   4, 8, 2, 1
-gravAcc         DWORD   0
-vInput          DWORD   0
 level           DWORD   1
 
 ; strings
