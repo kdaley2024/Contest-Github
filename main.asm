@@ -21,7 +21,6 @@ main PROC PUBLIC
     call Clrscr
    
     call CheckKeys
-    call ApplyGravity
     call UpdateSteps
     call MoveShipDown
     call CheckPlayerShipCollision
