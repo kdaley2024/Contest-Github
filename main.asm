@@ -3,6 +3,9 @@ INCLUDE LimbbyLimb.inc
 stickX      DWORD 6
 
 limbMask        DWORD 0Fh
+
+stickArms   BYTE "/-",0
+
 .code
 main PROC PUBLIC
 INVOKE ExitProcess, 0
