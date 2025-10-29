@@ -1,9 +1,6 @@
 INCLUDE LimbbyLimb.inc
 .code
 
-;declare PutChAt parameters
-PutChAt PROTO :BYTE, :DWORD, :DWORD
-
 ; Helper procedure that prints a single character at a specific x, y
 ; coordinate on the console using Irvine32 library.
 

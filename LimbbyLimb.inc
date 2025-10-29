@@ -12,11 +12,14 @@ DrawPlayer PROTO
 Gotoxy        PROTO
 WriteString   PROTO
 WriteChar     PROTO
-
+WriteDec      PROTO
+DrawHUD       PROTO
 
 
 ;global variables
 
 EXTERNDEF stickX:DWORD
 EXTERNDEF limbMask:DWORD
-
+EXTERNDEF titleMsg:BYTE
+EXTERNDEF lvlLbl:BYTE
+EXTERNDEF level:DWORD
