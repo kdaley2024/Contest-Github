@@ -2,6 +2,6 @@ INCLUDE LimbbyLimb.inc
 .data
 .code
 main PROC PUBLIC
-ret
+INVOKE ExitProcess, 0
 main ENDP
 END main
