@@ -46,7 +46,14 @@ DrawShip PROC USES eax ebx ecx edx edi
     INVOKE PutChAt, '^', edi, eax
 
 @colNext:
+    inc  edi
+    loop @cols
+    inc  eax
+    pop  ecx
+    loop @rows
 
+    mov  eax, (BLACK SHL 4) + WHITE
+    call SetTextColor
 
     ret
 DrawShip ENDP
