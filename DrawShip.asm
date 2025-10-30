@@ -33,6 +33,19 @@ DrawShip PROC USES eax ebx ecx edx edi
     push ecx
     mov  ecx, edx
     mov  edi, shipX
+@cols:
+    cmp  edi, 0
+    jl   @colNext
+    cmp  edi, scrW
+    jge  @colNext
+    cmp  eax, 0
+    jl   @colNext
+    cmp  eax, scrH
+    jge  @colNext
+
+    INVOKE PutChAt, '^', edi, eax
+
+@colNext:
 
 
     ret
