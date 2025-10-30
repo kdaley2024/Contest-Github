@@ -6,6 +6,7 @@ BLACK       EQU 0
 WHITE       EQU 15
 LIGHTRED    EQU 12
 LIGHTCYAN   EQU 11
+H_STEP      EQU 2
 
 .data
 
