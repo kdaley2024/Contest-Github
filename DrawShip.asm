@@ -21,6 +21,11 @@ DrawShip PROC USES eax ebx ecx edx edi
     mov  edx, 10
     mov  ebx, 3
 
+;makes the spaceships have a color of lightcyan
+    mov  eax, (BLACK SHL 4) + LIGHTCYAN
+    call SetTextColor
+
+
     ret
 DrawShip ENDP
 END
