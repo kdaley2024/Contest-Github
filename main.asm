@@ -12,6 +12,7 @@ lvlLbl      BYTE " Level: ",0
 level           DWORD 1
 
 stickX      DWORD 6
+shipY       SDWORD 1
 
 limbMask        DWORD 0Fh
 
