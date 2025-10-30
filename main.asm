@@ -1,4 +1,10 @@
 INCLUDE LimbbyLimb.inc
+
+BLACK       EQU 0
+WHITE       EQU 15
+LIGHTRED    EQU 12
+LIGHTCYAN   EQU 11
+
 .data
 
 titleMsg    BYTE "Limb by Limb",0
