@@ -8,6 +8,8 @@ OPTION PROC: PRIVATE
 
 PutChAt PROTO :BYTE, :DWORD, :DWORD
 DrawPlayer PROTO
+DrawHUD    PROTO
+DrawShip PROTO
 
 Gotoxy        PROTO
 WriteString   PROTO
