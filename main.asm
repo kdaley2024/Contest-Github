@@ -1,5 +1,7 @@
 INCLUDE LimbbyLimb.inc
 
+scrW        EQU 80
+scrH        EQU 25
 BLACK       EQU 0
 WHITE       EQU 15
 LIGHTRED    EQU 12
