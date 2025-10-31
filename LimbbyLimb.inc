@@ -12,6 +12,7 @@ DrawHUD    PROTO
 DrawShip PROTO
 CheckKeys PROTO
 SpawnShip PROTO
+MoveShipDown PROTO
 
 Gotoxy        PROTO
 WriteString   PROTO
@@ -37,3 +38,5 @@ EXTERNDEF level:DWORD
 EXTERNDEF shipY:SDWORD
 EXTERNDEF scrW:ABS, scrH:ABS
 EXTERNDEF bgSpeed2x:DWORD
+EXTERNDEF shipStep:DWORD
+
