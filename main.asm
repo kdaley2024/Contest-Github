@@ -45,6 +45,8 @@ main PROC PUBLIC
     call DrawHUD
     call DrawPlayer
 
-INVOKE ExitProcess, 0
+exitGame:
+    call Clrscr
+    INVOKE ExitProcess, 0
 main ENDP
 END main
