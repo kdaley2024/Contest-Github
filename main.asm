@@ -13,6 +13,7 @@ H_STEP      EQU 2
 titleMsg    BYTE "Limb by Limb",0
 lvlLbl      BYTE " Level: ",0
 level           DWORD 1
+lastBumpMs  DWORD 0
 
 stickX      DWORD 6
 shipX       SDWORD 70
@@ -30,6 +31,14 @@ bgSpeed2x   DWORD 2
 
 .code
 main PROC PUBLIC
+    call Clrscr
+    call Randomize
+
+    call GetTickCount@0
+    add  eax, 15000
+    mov  lastBumpMs, eax
+
+    call SpawnShip
 INVOKE ExitProcess, 0
 main ENDP
 END main

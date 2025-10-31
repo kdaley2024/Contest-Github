@@ -11,6 +11,7 @@ DrawPlayer PROTO
 DrawHUD    PROTO
 DrawShip PROTO
 CheckKeys PROTO
+SpawnShip PROTO
 
 Gotoxy        PROTO
 WriteString   PROTO
@@ -18,11 +19,12 @@ WriteChar     PROTO
 WriteDec      PROTO
 SetTextColor  PROTO
 RandomRange   PROTO
-
+Randomize     PROTO
+Clrscr        PROTO
 
 ;WIN API which was learnt from the textbook
 EXTERN  GetAsyncKeyState@4:PROC
-
+EXTERN  GetTickCount@0:PROC
 
 
 ;global variables
