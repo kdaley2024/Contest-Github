@@ -2,7 +2,7 @@ INCLUDE LimbbyLimb.inc
 
 .code
 
-; this procedure respawns the spaceship at top with new random X and size/HP
+; this procedure respawns the spaceship at top with new random X and size
 MoveShipDown PROC USES eax ebx
     mov  eax, shipY
     add  eax, shipStep
