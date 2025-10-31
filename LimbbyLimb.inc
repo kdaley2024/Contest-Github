@@ -17,6 +17,7 @@ WriteString   PROTO
 WriteChar     PROTO
 WriteDec      PROTO
 SetTextColor  PROTO
+RandomRange   PROTO
 
 
 ;WIN API which was learnt from the textbook
