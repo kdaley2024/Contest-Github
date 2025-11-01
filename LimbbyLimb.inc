@@ -31,7 +31,7 @@ EXTERN  GetTickCount@0:PROC
 
 ;global variables
 
-EXTERNDEF stickX:DWORD
+
 
 EXTERNDEF stickX:DWORD, stickY:DWORD
 EXTERNDEF shipType:DWORD
