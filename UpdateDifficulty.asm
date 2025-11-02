@@ -19,6 +19,7 @@ UpdateDifficulty PROC USES eax
     inc  eax
     mov  level, eax
 
+;;WIN API that was learnt from the textbook
     call GetTickCount@0
     add  eax, 15000
     mov  lastBumpMs, eax
