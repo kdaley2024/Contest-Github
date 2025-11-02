@@ -14,6 +14,7 @@ CheckKeys PROTO
 SpawnShip PROTO
 MoveShipDown PROTO
 UpdateSteps PROTO
+UpdateDifficulty PROTO
 
 Gotoxy        PROTO
 WriteString   PROTO
