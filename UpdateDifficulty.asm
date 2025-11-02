@@ -19,6 +19,10 @@ UpdateDifficulty PROC USES eax
     inc  eax
     mov  level, eax
 
+    call GetTickCount@0
+    add  eax, 15000
+    mov  lastBumpMs, eax
+
 @skip:
     ret
 UpdateDifficulty ENDP
