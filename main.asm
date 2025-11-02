@@ -49,11 +49,12 @@ gameLoop:
 
     call Clrscr
     call CheckKeys
-    call MoveShipDown
     call UpdateSteps
+    call MoveShipDown
     call DrawShip
     call DrawHUD
     call DrawPlayer
+    call UpdateDifficulty
 
     jmp  gameLoop
 
