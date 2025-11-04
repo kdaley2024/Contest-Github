@@ -34,6 +34,8 @@ shipAcc     DWORD 0
 
 bgSpeed2x   DWORD 2
 playerIFrames   DWORD 0
+nextDamageIdx   DWORD 0
+
 
 .code
 main PROC PUBLIC
@@ -54,11 +56,12 @@ gameLoop:
     call CheckKeys
     call UpdateSteps
     call MoveShipDown
+    call CheckPlayerShipCollision
     call DrawShip
     call DrawHUD
     call DrawPlayer
     call UpdateDifficulty
-    call CheckPlayerShipCollision
+    
 
     push frameDelay
     call Sleep@4
