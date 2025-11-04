@@ -32,6 +32,7 @@ shipStep    DWORD 1
 shipAcc     DWORD 0
 
 bgSpeed2x   DWORD 2
+playerIFrames   DWORD 0
 
 .code
 main PROC PUBLIC

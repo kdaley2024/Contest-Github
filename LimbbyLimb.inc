@@ -15,6 +15,7 @@ SpawnShip PROTO
 MoveShipDown PROTO
 UpdateSteps PROTO
 UpdateDifficulty PROTO
+CheckPlayerShipCollision PROTO
 
 Gotoxy        PROTO
 WriteString   PROTO
