@@ -22,6 +22,13 @@ DamagePlayer PROC USES eax ebx ecx edx
     mov  eax, 4
     mov  playerFlash, eax
 
+    mov  eax, limbMask
+    cmp  eax, 0
+    jne  @done
+
+;the game will end when all the limbs are gone
+    mov  bgSpeed2x, 0FFFFFFFFh
+
 @done:
     ret
 DamagePlayer ENDP
