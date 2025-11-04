@@ -16,6 +16,12 @@ DamagePlayer PROC USES eax ebx ecx edx
     inc  eax
     mov  nextDamageIdx, eax
 
+    mov  eax, 20
+    mov  playerIFrames, eax
+
+    mov  eax, 4
+    mov  playerFlash, eax
+
 @done:
     ret
 DamagePlayer ENDP
