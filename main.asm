@@ -58,6 +58,7 @@ gameLoop:
     call DrawHUD
     call DrawPlayer
     call UpdateDifficulty
+    call CheckPlayerShipCollision
 
     push frameDelay
     call Sleep@4
