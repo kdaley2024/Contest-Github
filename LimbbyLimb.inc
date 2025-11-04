@@ -54,3 +54,4 @@ EXTERNDEF frameDelay:DWORD
 EXTERNDEF stickY:DWORD
 EXTERNDEF nextDamageIdx:DWORD
 EXTERNDEF damageOrder:DWORD
+EXTERNDEF playerIFrames:DWORD, playerFlash:DWORD
