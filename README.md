@@ -55,6 +55,8 @@ Random: Randomize, RandomRange (Irvine32)
 
 Timing: GetTickCount, Sleep (Win32)
 
+## APIs used from Microsoft Learn
+
 Keyboard (non-blocking): GetAsyncKeyState (Win32)
 
 # Game Operations
