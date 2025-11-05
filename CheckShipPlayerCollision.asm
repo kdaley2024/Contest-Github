@@ -40,7 +40,7 @@ CheckPlayerShipCollision PROC USES eax ebx ecx edx esi edi ebp
     sub  ebx, 1                       ; px0 = x-1
     add  edi, 1                       ; px1 = x+1
     
-       ; ---- X overlap quick-reject ----
+    ;X overlap quick-reject
     cmp  eax, edi                    
     jg   @skip
     cmp  ecx, ebx                     ; sx1 < px0 ?
