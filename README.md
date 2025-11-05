@@ -27,7 +27,7 @@ On hit:
 
 One limb is removed in order: arms → legs → body → head.
 
-The stickman flashes red for a few frames and has brief i-frames.
+The stickman flashes red for a few frames and has brief i-frames (invincibility).
 
 When all limbs are gone, the game ends.
 
