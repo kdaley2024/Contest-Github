@@ -1,4 +1,4 @@
-# Contest-Github
+# Limb by Limb
 Computer Architecture and Assembly Language contest code by Chervelle Pierre and Karla Daley.
 
 # Overview
